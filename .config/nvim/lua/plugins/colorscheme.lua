@@ -1,16 +1,9 @@
 return {
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
+        "ellisonleao/gruvbox.nvim",
         priority = 1000,
         config = function()
-            require("catppuccin").setup({
-                integrations = {
-                    treesitter = true,
-                },
-                transparent_background = true,
-            })
-            vim.cmd.colorscheme("catppuccin")
+            vim.cmd.colorscheme("gruvbox")
         end,
     },
 }
