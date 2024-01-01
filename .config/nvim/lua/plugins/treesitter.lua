@@ -3,7 +3,7 @@ return {
         "nvim-treesitter/nvim-treesitter",
         config = function()
             require("nvim-treesitter.configs").setup({
-                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust" },
+                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust", "javascript", "scss" },
                 auto_install = false,
 
                 highlight = {
