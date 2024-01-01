@@ -1,0 +1,15 @@
+* {
+  all: unset; }
+
+.bar {
+  background-color: #282828; }
+
+.bar.vertical {
+  padding: 20px 0px; }
+
+.bar.horizontal {
+  padding: 0px 20px; }
+
+.corner {
+  background-color: #282828;
+  border-radius: 1.705rem; }
