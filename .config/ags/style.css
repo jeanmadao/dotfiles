@@ -22,7 +22,8 @@
 
 .workspace-entry {
   background-color: #504945;
-  transition: background-color 0.2s ease-in-out; }
+  transition: background-color 0.2s ease-in-out;
+  font-weight: bold; }
 
 .workspace-entry.current {
   background-color: #98971a; }
@@ -35,8 +36,37 @@
 
 .player {
   background-color: #3c3836;
-  border-radius: 5px;
-  padding: 10px 20px; }
+  border-radius: 10px;
+  margin: 5px;
+  font-weight: bold; }
+
+.player.playing {
+  background-color: #689d6a; }
+
+.album-cover {
+  min-height: 40px;
+  min-width: 40px;
+  background-size: contain;
+  background-position: center;
+  border-radius: 10px;
+  margin: 2px; }
+
+.track-info {
+  padding: 0px 15px; }
+
+.player-btn {
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 10px; }
+
+.player-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.player-icon {
+  opacity: 0; }
+
+.player-btn:hover .player-icon {
+  opacity: 1; }
 
 .button {
   min-height: 30px;

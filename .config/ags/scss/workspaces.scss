@@ -8,6 +8,7 @@
 .workspace-entry {
     background-color: $bg2;
     transition: background-color 0.2s ease-in-out;
+    font-weight: bold;
 }
 
 .workspace-entry.current {
