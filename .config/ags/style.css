@@ -13,3 +13,32 @@
 .corner {
   background-color: #282828;
   border-radius: 1.705rem; }
+
+.workspaces {
+  background-color: #3c3836;
+  padding: 5px;
+  border-radius: 999px;
+  margin: 5px; }
+
+.workspace-entry {
+  background-color: #504945;
+  transition: background-color 0.2s ease-in-out; }
+
+.workspace-entry.current {
+  background-color: #98971a; }
+
+.workspace-entry.active {
+  background-color: #62693e; }
+
+.workspace-entry:hover {
+  background-color: #b8bb26; }
+
+.player {
+  background-color: #3c3836;
+  border-radius: 5px;
+  padding: 10px 20px; }
+
+.button {
+  min-height: 30px;
+  min-width: 30px;
+  border-radius: 999px; }

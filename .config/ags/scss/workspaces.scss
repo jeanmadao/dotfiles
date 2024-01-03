@@ -1,0 +1,23 @@
+.workspaces {
+    background-color: $bg1;
+    padding: 5px;
+    border-radius: 999px;
+    margin: 5px;
+}
+
+.workspace-entry {
+    background-color: $bg2;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.workspace-entry.current {
+    background-color: $neutral_green;
+}
+
+.workspace-entry.active {
+    background-color: $dark_green;
+}
+
+.workspace-entry:hover {
+    background-color: $bright_green;
+}
