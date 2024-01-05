@@ -22,4 +22,8 @@ vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
 
+vim.opt.confirm = true
+
 vim.g.mapleader = " "
+
+vim.o.undofile = true
