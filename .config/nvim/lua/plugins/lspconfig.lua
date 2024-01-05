@@ -2,9 +2,10 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            -- Setup language servers.
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local lspconfig = require('lspconfig')
-            lspconfig.rust_analyzer.setup {
+            lspconfig.rust_analyzer.setup({
+                capabilities = capabilities,
                 settings = {
                     ['rust-analyzer'] = {
                         diagnostics = {
@@ -12,7 +13,7 @@ return {
                         }
                     },
                 },
-            }
+            })
             -- Global mappings.
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions
             vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
