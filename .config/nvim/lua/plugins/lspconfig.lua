@@ -1,19 +1,12 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        opts = {
+            inlay_hints = { enabled = true },
+        },
         config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local lspconfig = require('lspconfig')
-            lspconfig.rust_analyzer.setup({
-                capabilities = capabilities,
-                settings = {
-                    ['rust-analyzer'] = {
-                        diagnostics = {
-                            enable = true;
-                        }
-                    },
-                },
-            })
             -- Global mappings.
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions
             vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
