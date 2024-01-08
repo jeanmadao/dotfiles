@@ -1,6 +1,7 @@
 import Widget from "resource:///com/github/Aylur/ags/widget.js"
 import Workspaces from "./workspaces.js"
 import Player from "./player.js"
+import System from "./system.js"
 
 const Start = (vertical) => Widget.Box({
     hpack: vertical ? "center" : "start",
@@ -22,7 +23,7 @@ const End = (vertical) => Widget.Box({
     hpack: vertical ? "center" : "end",
     vpack: vertical ? "end" : "center",
     children: [
-        Widget.Label("End"),
+        System(vertical),
     ],
 })
 
