@@ -7,24 +7,58 @@ SYSTEM_PACKAGES="\
 	reflector \
 	pacman-contrib \
 	xdg-user-dirs \
+	pass \
+	wireguard-tools \
+	openssh \
+	unzip \
+	wget \
+	ripgrep \
+	fd \
 	noto-fonts \
 	noto-fonts-emoji \
 	noto-fonts-cjk \
 	ttf-firacode-nerd \
+	ttf-liberation \
+	tree-sitter-cli \
+	ffmpegthumbnailer \
+	p7zip \
+	jq \
+	poppler \
+	fzf \
+	zoxide \
+	imagemagick \
+	libnotify \
+	cronie \
 	"
 
 TERMINAL_PACKAGES="\
 	kitty \
 	zsh \
+	zsh-completions \
+	zsh-syntax-highlighting \
+	zsh-autosuggestions
 	git \
 	neovim \
 	yazi \
 	starship \
+	btop \
+	lazygit \
 	"
 
 DEVELOPMENT_PACKAGES="\
 	python \
+	python-pip \
+	pyright \
 	rustup \
+	rust-analyzer \
+	lua \
+	lua-language-server \
+	stylua \
+	luarocks \
+	bun-bin \
+	typescript-language-server \
+	prettier \
+	sassc \
 	"
 
 NVIDIA_PACKAGES="\
@@ -70,7 +104,8 @@ BLACKARCH_PACKAGES="\
 	ghidra \
 	gdb \
 	nmap \
-	openssh \
+	wireshark-qt \
+	hashcat \
 	"
 
 APP_PACKAGES="\
@@ -79,14 +114,25 @@ APP_PACKAGES="\
 	vesktop-bin \
 	spotify-launcher \
 	steam \
+	wine \
+	wine-mono \
+	wine-gecko \
+	heroic-games-launcher-bin \
+	geoclue \
+	dolphin \
+	gammastep \
+	grim \
+	slurp \
+	zathura \
+	zathura-pdf-poppler \
+	obs-studio \
+	mpv \
+	qbittorrent \
+	stremio \
 	"
 
-MISC_PACKAGES="\
-	pass \
-	wireguard-tools \
-	"
 
-PACKAGES="$SYSTEM_PACKAGES $TERMINAL_PACKAGES $DEVELOPMENT_PACKAGES $NVIDIA_PACKAGES $DESKTOP_PACKAGES $SOUND_PACKAGES $BLACKARCH_PACKAGES $APP_PACKAGES $MISC_PACKAGES" 
+PACKAGES="$SYSTEM_PACKAGES $TERMINAL_PACKAGES $DEVELOPMENT_PACKAGES $NVIDIA_PACKAGES $DESKTOP_PACKAGES $SOUND_PACKAGES $BLACKARCH_PACKAGES $APP_PACKAGES" 
 
 err() {
 	echo >&2 "$(tput bold; tput setaf 1)[-] ERROR: ${*}$(tput sgr0)"
@@ -192,17 +238,18 @@ packages_install() {
 		err "wasn't able to upgrade the packages"
 	fi
 
-	if ! yay -S $PACKAGES; then
+	if ! yay -S --needed $PACKAGES; then
 		err "couldn't download all the packages"
 	fi
 }
 
-hyprland_setup() {
-}
+# hyprland_setup() {
+# }
 
 system_setup() {
 	msg "system setup..."
 	systemctl enable paccache.timer
+	systemctl enable cronie.service
 
 	sudo mv /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bak
 	sudo sh -c "sed 's/kms //' /etc/mkinitcpio.conf.bak > /etc/mkinitcpio.conf"
@@ -218,14 +265,15 @@ system_setup() {
 
 	chsh -s /usr/bin/zsh
 
+	rustup default stable
 }
 
 archmadao_setup()
 {
 	msg "installing archmadao..."
-	initial_setup
+	# initial_setup
 	packages_install
-	system_setup
+	# system_setup
 	# hyprland_setup
 
 }
