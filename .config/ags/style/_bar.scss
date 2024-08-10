@@ -1,0 +1,29 @@
+.bar {
+    color: $light0;
+    background-color: $dark0;
+    padding: 0px 25px;
+}
+
+.workspaces {
+    padding: 5px;
+    margin: 5px;
+    background-color: $dark1;
+    border-radius: 30px;
+}
+
+.button {
+    color: $light0;
+    border-radius: 15px;
+    min-height: 25px;
+    min-width: 25px;
+    background-color: $dark2;
+}
+
+.button.active {
+    background-color: $dark4;
+}
+
+
+.button.focus {
+    background-color: $neutral_green;
+}
