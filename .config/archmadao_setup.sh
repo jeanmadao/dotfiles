@@ -80,6 +80,7 @@ DESKTOP_PACKAGES="\
     polkit-kde-agent \
     qt5-wayland \
     qt6-wayland \
+    qt5-graphicaleffects \
     aylurs-gtk-shell \
     wofi \
     wl-clipboard \
@@ -252,6 +253,7 @@ system_setup() {
     msg "system setup..."
     systemctl enable paccache.timer
     systemctl enable cronie.service
+    systemctl enable sddm.service
 
     sudo mv /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bak
     sudo sh -c "sed 's/kms //' /etc/mkinitcpio.conf.bak > /etc/mkinitcpio.conf"
