@@ -22,3 +22,5 @@ function yy() {
 }
 
 eval "$(starship init zsh)"
+alias a='arsenal'
+alias a='arsenal'

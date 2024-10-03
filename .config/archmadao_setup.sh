@@ -10,6 +10,7 @@ SYSTEM_PACKAGES="\
     xdg-user-dirs \
     pass \
     wireguard-tools \
+    openvpn \
     openssh \
     unzip \
     wget \
@@ -68,6 +69,7 @@ NVIDIA_PACKAGES="\
     nvidia-utils \
     lib32-nvidia-utils \
     egl-wayland \
+    cuda \
     "
 
 DESKTOP_PACKAGES="\
@@ -105,10 +107,16 @@ SOUND_PACKAGES="\
 BLACKARCH_PACKAGES="\
     burpsuite \
     ghidra \
+    avaloniailspy \
+    dotnet-sdk-6.0 \
+    python-oletools \
     gdb \
     nmap \
     wireshark-qt \
     hashcat \
+    john \
+    seclists \
+    gobuster \
     "
 
 APP_PACKAGES="\
@@ -132,6 +140,7 @@ APP_PACKAGES="\
     mpv \
     qbittorrent \
     stremio \
+    libreoffice \
     "
 
 
