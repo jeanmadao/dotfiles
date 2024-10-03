@@ -18,7 +18,7 @@ return {
       {
         "L3MON4D3/LuaSnip",
         build = (function()
-          if vim.fn.has "win32" == 1 or vim.fn.executable "make" == 0 then
+          if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then
             return
           end
           return "make install_jsregexp"
@@ -32,25 +32,25 @@ return {
       -- See `:help cmp`
       local cmp = require("cmp")
       local luasnip = require("luasnip")
-      luasnip.config.setup {}
+      luasnip.config.setup({})
 
-      cmp.setup {
+      cmp.setup({
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
           end,
         },
         completion = { completeopt = "menu,menuone,noinsert" },
-        mapping = cmp.mapping.preset.insert {
+        mapping = cmp.mapping.preset.insert({
           ["<C-n>"] = cmp.mapping.select_next_item(),
           ["<C-p>"] = cmp.mapping.select_prev_item(),
 
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
 
-          ["<C-y>"] = cmp.mapping.confirm { select = true },
+          ["<C-y>"] = cmp.mapping.confirm({ select = true }),
 
-          ["<C-Space>"] = cmp.mapping.complete {},
+          ["<C-Space>"] = cmp.mapping.complete({}),
 
           ["<C-l>"] = cmp.mapping(function()
             if luasnip.expand_or_locally_jumpable() then
@@ -62,8 +62,7 @@ return {
               luasnip.jump(-1)
             end
           end, { "i", "s" }),
-
-        },
+        }),
         sources = {
           {
             name = "lazydev",
@@ -73,7 +72,7 @@ return {
           { name = "luasnip" },
           { name = "path" },
         },
-      }
+      })
     end,
   },
   {
@@ -118,14 +117,14 @@ return {
               group = vim.api.nvim_create_augroup("lsp-detach", { clear = true }),
               callback = function(event2)
                 vim.lsp.buf.clear_references()
-                vim.api.nvim_clear_autocmds { group = "lsp-highlight", buffer = event2.buf }
+                vim.api.nvim_clear_autocmds({ group = "lsp-highlight", buffer = event2.buf })
               end,
             })
           end
 
           if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
             map("<leader>th", function()
-              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
+              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
             end, "[T]oggle Inlay [H]ints")
           end
         end,
@@ -135,11 +134,11 @@ return {
       capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
       local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         pyright = {},
         rust_analyzer = {},
-        tsserver = {},
+        ts_ls = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -163,6 +162,6 @@ return {
 
         lspconfig[name].setup(config)
       end
-    end
-  }
+    end,
+  },
 }
