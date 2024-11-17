@@ -1,29 +1,40 @@
-.bar {
-    color: $light0;
-    background-color: $dark0;
-    padding: 0px 25px;
-}
+window.Bar {
+  color: $light0;
+  background-color: $dark0;
 
-.workspaces {
-    padding: 5px;
-    margin: 5px;
+  centerbox {
+    margin: 0px 20px;
+  }
+
+  .Widget {
     background-color: $dark1;
     border-radius: 30px;
+  }
+
+  .Datetime {
+    padding: 10px;
+  }
+
+  .Workspaces {
+    padding: 5px;
+
+    .Workspace {
+      color: $light0;
+      border-radius: 15px;
+      min-height: 25px;
+      min-width: 25px;
+      background-color: $dark2;
+    }
+
+    .Workspace.occupied {
+      background-color: $dark4;
+    }
+
+    .Workspace.active {
+      background-color: $neutral_green;
+    }
+  }
 }
 
-.button {
-    color: $light0;
-    border-radius: 15px;
-    min-height: 25px;
-    min-width: 25px;
-    background-color: $dark2;
-}
-
-.button.active {
-    background-color: $dark4;
-}
 
 
-.button.focus {
-    background-color: $neutral_green;
-}
