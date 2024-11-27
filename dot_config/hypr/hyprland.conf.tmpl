@@ -65,11 +65,13 @@ env = QT_QPA_PLATFORM,wayland;xcb
 env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 env = QT_QPA_PLATFORMTHEME,qt5ct
 
+{{- if eq .chezmoi.hostname "archmadao" }}
 env = GBM_BACKEND,nvidia-drm
 env = __GLX_VENDOR_LIBRARY_NAME,nvidia
 env = LIBVA_DRIVER_NAME,nvidia
 env = __GL_GSYNC_ALLOWED,0
 env = __GL_VRR_ALLOWED,0
+{{- end }}
 
 
 #####################
