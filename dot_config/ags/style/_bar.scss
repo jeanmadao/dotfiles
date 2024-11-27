@@ -1,0 +1,40 @@
+window.Bar {
+  color: $light0;
+  background-color: $dark0;
+
+  centerbox {
+    margin: 0px 20px;
+  }
+
+  .Widget {
+    background-color: $dark1;
+    border-radius: 30px;
+  }
+
+  .Datetime {
+    padding: 10px;
+  }
+
+  .Workspaces {
+    padding: 5px;
+
+    .Workspace {
+      color: $light0;
+      border-radius: 15px;
+      min-height: 25px;
+      min-width: 25px;
+      background-color: $dark2;
+    }
+
+    .Workspace.occupied {
+      background-color: $dark4;
+    }
+
+    .Workspace.active {
+      background-color: $neutral_green;
+    }
+  }
+}
+
+
+

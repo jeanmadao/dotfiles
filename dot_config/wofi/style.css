@@ -1,0 +1,46 @@
+window {
+    background: linear-gradient(150deg, #d65d0e, #ebdbb2);
+    font-weight: bold;
+    font-family: FantasqueSansM Nerd Font Mono;
+    margin: 10px;
+}
+
+#outer-box {
+    margin: 3px;
+    background-color: #282828;
+}
+
+#input {
+    margin: 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d65d0e;
+    /*border-color: linear-gradient(150deg, #d65d0e, #ebdbb2);*/
+    background-color: #3c3836;
+    color: #ebdbb2;
+}
+
+#scroll {
+    margin: 10px;
+}
+
+#inner-box {
+    background-color: #282828;
+}
+#entry:nth-child(even) {
+    background: #282828;
+}
+#entry:nth-child(odd) {
+    background: #3c3836;
+}
+
+#entry:selected {
+    background: #d65d0e;
+}
+
+#text {
+    margin: 5px;
+    color: #ebdbb2;
+} 
+
