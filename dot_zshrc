@@ -1,3 +1,7 @@
+if uwsm check may-start && uwsm select; then
+    exec systemd-cat -t uwsm_start uwsm start default
+fi
+
 #Completion
 autoload -Uz compinit
 compinit
@@ -19,7 +23,3 @@ function yy() {
 }
 
 eval "$(starship init zsh)"
-
-if uwsm check may-start && uwsm select; then
-	exec systemd-cat -t uwsm_start uwsm start default
-fi
