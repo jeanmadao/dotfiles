@@ -33,46 +33,6 @@ exec-once = /usr/bin/vesktop
 exec-once = /usr/bin/thunderbird
 exec-once = /usr/bin/kitty --title "update system" yay
 
-#############################
-### ENVIRONMENT VARIABLES ###
-#############################
-
-# See https://wiki.hyprland.org/Configuring/Environment-variables/
-
-env = XCURSOR_SIZE,24
-env = HYPRCURSOR_SIZE,24
-
-env = HYPRLAND_TRACE,1
-env = HYPRLAND_NO_RT,1
-env = HYPRLAND_NO_SD_NOTIFY,1
-env = HYPRLAND_NO_SD_VARS,1
-
-env = AQ_TRACE,1
-env = AQ_MGPU_NO_EXPLICIT,1
-env = AQ_NO_MODIFIERS,1
-
-env = GDK_BACKEND,wayland,x11,*
-env = QT_QPA_PLATFORM,wayland;xcb
-env = SDL_VIDEODRIVER,wayland
-env = CLUTTER_BACKEND,wayland
-
-env = XDG_CURRENT_DESKTOP,Hyprland
-env = XDG_SESSION_TYPE,wayland
-env = XDG_SESSION_DESKTOP,Hyprland
-
-env = QT_AUTO_SCREEN_SCALE_FACTOR,1
-env = QT_QPA_PLATFORM,wayland;xcb
-env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
-env = QT_QPA_PLATFORMTHEME,qt5ct
-
-{{- if eq .chezmoi.hostname "archmadao" }}
-env = GBM_BACKEND,nvidia-drm
-env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-env = LIBVA_DRIVER_NAME,nvidia
-env = __GL_GSYNC_ALLOWED,0
-env = __GL_VRR_ALLOWED,0
-{{- end }}
-
 
 #####################
 ### LOOK AND FEEL ###
