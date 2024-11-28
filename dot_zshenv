@@ -1,7 +1,7 @@
 export VISUAL=nvim
 export EDITOR=nvim
 export BROWSER=firefox-developer-edition
-export ANDROID_HOME=/opt/android-sdk/
+export ANDROID_HOME=/opt/android-sdk
 
 typeset -U path PATH
 path=(~/.local/bin $path)
@@ -9,5 +9,5 @@ path=(~/.cargo/bin $path)
 path=($ANDROID_HOME $path)
 path=($ANDROID_HOME/cmdline-tools/latest/bin $path)
 path=($ANDROID_HOME/emulator $path)
-path=($ANDROID_HOME/platform-tools/ $path)
+path=($ANDROID_HOME/platform-tools $path)
 export PATH
