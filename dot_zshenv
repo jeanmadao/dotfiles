@@ -8,8 +8,10 @@ typeset -U path PATH
 path=(~/.local/bin $path)
 path=(~/.cargo/bin $path)
 path=($DOTNET_ROOT $path)
+path=($DOTNET_ROOT/tools/ $path)
 path=($ANDROID_HOME $path)
 path=($ANDROID_HOME/cmdline-tools/latest/bin $path)
+path=($ANDROID_HOME/build-tools $path)
 path=($ANDROID_HOME/emulator $path)
 path=($ANDROID_HOME/platform-tools $path)
 export PATH
