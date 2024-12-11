@@ -2,6 +2,8 @@ export VISUAL=nvim
 export EDITOR=nvim
 export BROWSER=firefox-developer-edition
 export ANDROID_HOME=/opt/android-sdk
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_AVD_HOME=~/.config/.android/avd
 export DOTNET_ROOT=~/.dotnet
 
 typeset -U path PATH
