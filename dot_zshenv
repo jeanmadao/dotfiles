@@ -3,6 +3,8 @@ export EDITOR=nvim
 export BROWSER=firefox-developer-edition
 export ANDROID_HOME=/opt/android-sdk
 export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_NDK=/opt/android-ndk
+export ANDROID_NDK_HOME=/opt/android-ndk
 export ANDROID_AVD_HOME=~/.config/.android/avd
 export DOTNET_ROOT=~/.dotnet
 
@@ -11,9 +13,10 @@ path=(~/.local/bin $path)
 path=(~/.cargo/bin $path)
 path=($DOTNET_ROOT $path)
 path=($DOTNET_ROOT/tools/ $path)
-path=($ANDROID_HOME $path)
-path=($ANDROID_HOME/cmdline-tools/latest/bin $path)
-path=($ANDROID_HOME/build-tools $path)
-path=($ANDROID_HOME/emulator $path)
-path=($ANDROID_HOME/platform-tools $path)
+path=($ANDROID_SDK_ROOT $path)
+path=($ANDROID_NDK_HOME $path)
+path=($ANDROID_SDK_ROOT/cmdline-tools/latest/bin $path)
+path=($ANDROID_SDK_ROOT/build-tools $path)
+path=($ANDROID_SDK_ROOT/emulator $path)
+#path=($ANDROID_SDK_ROOT/platform-tools $path)
 export PATH
