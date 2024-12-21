@@ -6,13 +6,17 @@ import System from "./System"
 const StartWidget = () => {
     return <box
         className="StartWidget"
-        halign={Gtk.Align.START}>
+        spacing={10}
+        halign={Gtk.Align.START}
+    >
     </box>
 }
 
 const CenterWidget = () => {
     return <box
-        className="CenterWidget">
+        className="CenterWidget"
+        spacing={10}
+    >
         <Workspaces />
     </box>
 }
@@ -20,7 +24,9 @@ const CenterWidget = () => {
 const EndWidget = () => {
     return <box
         className="EndWidget"
-        halign={Gtk.Align.END}>
+        spacing={10}
+        halign={Gtk.Align.END}
+    >
         <System />
         <Datetime />
     </box>
@@ -33,8 +39,7 @@ const CenterBox = () => {
         startWidget={<StartWidget />}
         centerWidget={<CenterWidget />}
         endWidget={<EndWidget />}
-        >
-    </centerbox>
+    />
 }
 
 const Bar = (gdkmonitor: Gdk.Monitor) => {
