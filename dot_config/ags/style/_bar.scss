@@ -11,8 +11,19 @@ window.Bar {
     border-radius: 30px;
   }
 
+  // .circular {
+  //   min-height: 5em;
+  //
+  // }
+
   .Datetime {
     padding: 10px;
+  }
+
+  .System {
+    .Sysinfo {
+      margin: 10px;
+    }
   }
 
   .Workspaces {

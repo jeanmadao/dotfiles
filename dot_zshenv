@@ -7,12 +7,15 @@ export ANDROID_NDK=/opt/android-ndk
 export ANDROID_NDK_HOME=/opt/android-ndk
 export ANDROID_AVD_HOME=~/.config/.android/avd
 export DOTNET_ROOT=~/.dotnet
+export JAVA_HOME=/usr/lib/jvm/default
+export JAVA_ROOT=/usr/lib/jvm/default
 
 typeset -U path PATH
 path=(~/.local/bin $path)
 path=(~/.cargo/bin $path)
 path=($DOTNET_ROOT $path)
 path=($DOTNET_ROOT/tools/ $path)
+path=($JAVA_HOME $path)
 path=($ANDROID_SDK_ROOT $path)
 path=($ANDROID_NDK_HOME $path)
 path=($ANDROID_SDK_ROOT/cmdline-tools/latest/bin $path)

@@ -23,7 +23,12 @@ function yy() {
     rm -f -- "$tmp"
 }
 
-alias fri="frida -U -l _agent.js"
+alias "chezmoi edit"="chezmoi edit --apply"
+
+alias frida="frida -U"
+alias frida-ps="frida-ps -U"
+alias fri="frida -l _agent.js"
 alias frisan="fri -f srflipflop.fridasandbox"
+alias fripin="fri -f com.companyname.mauipinning"
 
 eval "$(starship init zsh)"

@@ -1,6 +1,7 @@
 import { App, Astal, Gtk, Gdk } from "astal/gtk3"
 import Workspaces from "./Workspaces"
 import Datetime from "./Datetime"
+import System from "./System"
 
 const StartWidget = () => {
     return <box
@@ -12,8 +13,7 @@ const StartWidget = () => {
 const CenterWidget = () => {
     return <box
         className="CenterWidget">
-        { <Workspaces />
-        }
+        <Workspaces />
     </box>
 }
 
@@ -21,6 +21,7 @@ const EndWidget = () => {
     return <box
         className="EndWidget"
         halign={Gtk.Align.END}>
+        <System />
         <Datetime />
     </box>
 }
