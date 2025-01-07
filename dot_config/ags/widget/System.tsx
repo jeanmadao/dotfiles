@@ -36,7 +36,7 @@ const BatteryWidget = () => {
             icon={bind(battery, "battery_icon_name").as(icon_name => icon_name)}
         />
         <label
-            label={bind(battery, "percentage").as(percentage => `${percentage * 100}%`)}
+            label={bind(battery, "percentage").as(percentage => `${Math.round(percentage * 100)}%`)}
         />
     </box>
 }
