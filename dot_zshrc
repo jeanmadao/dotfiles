@@ -29,5 +29,6 @@ alias frida-ps="frida-ps -U"
 alias fri="frida -l _agent.js"
 alias frisan="fri -f srflipflop.fridasandbox"
 alias fripin="fri -f com.companyname.mauipinning"
+alias fripind="fri -f com.companyname.mauipinningdebug"
 
 eval "$(starship init zsh)"
