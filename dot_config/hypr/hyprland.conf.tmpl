@@ -35,10 +35,6 @@ exec-once = /usr/bin/qbittorrent
 exec-once = /usr/bin/vesktop
 exec-once = /usr/bin/thunderbird
 exec-once = /usr/bin/kitty --title "update system" yay
-{{- if eq .chezmoi.hostname "yuniverse" }}
-exec-once = /usr/bin/kitty --title "launch vpn" wg-quick up wg0
-{{- end }}
-
 
 #####################
 ### LOOK AND FEEL ###
