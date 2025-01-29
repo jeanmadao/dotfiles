@@ -24,6 +24,7 @@ path=($ANDROID_SDK_ROOT/emulator $path)
 path=(/home/feilong/Dev/internship/android/bin/Release/bin/assembly-store-reader $path)
 path=(/home/feilong/Dev/internship/android/bin/Release/bin/assembly-store-reader/linux-x64 $path)
 path=(/home/feilong/Dev/internship/android/bin/Release/bin/linux-x64 $path)
+path=(/home/feilong/Dev/internship/android/tools/disassemblies/bin/Release/net9.0 $path)
 
 #path=($ANDROID_SDK_ROOT/platform-tools $path)
 
