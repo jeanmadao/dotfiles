@@ -21,10 +21,7 @@ path=($ANDROID_NDK_HOME $path)
 path=($ANDROID_SDK_ROOT/cmdline-tools/latest/bin $path)
 path=($ANDROID_SDK_ROOT/build-tools $path)
 path=($ANDROID_SDK_ROOT/emulator $path)
-path=(/home/feilong/Dev/internship/android/bin/Release/bin/assembly-store-reader $path)
-path=(/home/feilong/Dev/internship/android/bin/Release/bin/assembly-store-reader/linux-x64 $path)
-path=(/home/feilong/Dev/internship/android/bin/Release/bin/linux-x64 $path)
-path=(/home/feilong/Dev/internship/android/tools/disassemblies/bin/Release/net9.0 $path)
+path=(/home/feilong/Dev/android/bin/Release/bin $path)
 
 #path=($ANDROID_SDK_ROOT/platform-tools $path)
 

@@ -25,6 +25,7 @@ function yy() {
 
 alias "chezmoi edit"="chezmoi edit --apply"
 
+alias ssh="kitten ssh"
 alias frida="frida -U"
 alias frida-ps="frida-ps -U"
 alias fri="frida -l _agent.js"
